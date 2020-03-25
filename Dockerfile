@@ -12,6 +12,7 @@ RUN gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 7568D9BB55FF9E5287D58
 RUN gpg --armor --export 7568D9BB55FF9E5287D586017AE645C0CF8E292A > key.tmp
 RUN rpm --import key.tmp
 RUN rm -f key.tmp
+RUN yum clean all
 
 RUN yum install -y pritunl-zero
 
