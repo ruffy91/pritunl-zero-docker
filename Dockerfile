@@ -1,10 +1,10 @@
-FROM centos:8
+FROM centos:7
 
 RUN yum update -y
 
 RUN echo $'[pritunl]\n\
 name=Pritunl Repository\n\
-baseurl=https://repo.pritunl.com/stable/yum/centos/8/\n\
+baseurl=https://repo.pritunl.com/stable/yum/centos/7/\n\
 gpgcheck=1\n\
 enabled=1' > /etc/yum.repos.d/pritunl.repo
 
